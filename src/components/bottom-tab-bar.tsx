@@ -1,3 +1,4 @@
+// Barra de navegación inferior
 import { Colors } from "@/constants/theme";
 import { useRouter } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";

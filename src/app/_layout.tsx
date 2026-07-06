@@ -1,3 +1,4 @@
+// Layout raíz de la app
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { DarkTheme, DefaultTheme, ThemeProvider } from "@react-navigation/native";
 import { Stack } from "expo-router";
@@ -18,8 +19,7 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   useEffect(() => {
-    // Pinta el fondo de la ventana del OS para que no aparezca
-    // el espacio blanco entre la app y los botones de Android.
+    // Fondo de la ventana del sistema
     SystemUI.setBackgroundColorAsync(
       colorScheme === "dark" ? "#000000" : "#F5EDE0"
     );
@@ -33,6 +33,8 @@ export default function RootLayout() {
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="categorias/[nombre]" options={{ headerShown: true }} />
+            <Stack.Screen name="marcas/[nombre]" options={{ headerShown: true }} />
+            <Stack.Screen name="etiquetas/[nombre]" options={{ headerShown: true }} />
             <Stack.Screen name="ficha/[id]" options={{ headerShown: false }} />
             <Stack.Screen name="index" options={{ headerShown: false }} />
           </Stack>

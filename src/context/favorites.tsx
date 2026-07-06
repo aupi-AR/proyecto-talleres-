@@ -1,3 +1,4 @@
+// Contexto de favoritos
 import React, { createContext, useContext, useState } from "react";
 
 export type FavoriteProduct = {

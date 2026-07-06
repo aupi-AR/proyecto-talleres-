@@ -1,3 +1,4 @@
+// Datos de marcas
 export type Marca = {
   id: string;
   nombre: string;

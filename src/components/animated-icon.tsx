@@ -1,3 +1,4 @@
+// Splash animado
 import { Image } from 'expo-image';
 import { useState } from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';

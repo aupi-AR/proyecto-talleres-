@@ -1,3 +1,4 @@
+// Vista con tema
 import { View, type ViewProps } from 'react-native';
 
 import { ThemeColor } from '@/constants/theme';

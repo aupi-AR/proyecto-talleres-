@@ -1,3 +1,4 @@
+// Pantalla de favoritos
 import { FavoriteProduct, useFavorites } from "@/context/favorites";
 import { fichaShowRoute } from "@/navigation/routes";
 import { Image } from "expo-image";

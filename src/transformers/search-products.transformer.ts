@@ -1,3 +1,4 @@
+// Transformer de respuesta de búsqueda
 import { ProductSearchResponse } from "@/services/productos.service";
 
 export type ProductItem = {

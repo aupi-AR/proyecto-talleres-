@@ -1,10 +1,11 @@
+// Rutas de navegación
 import { Href } from "expo-router";
 
 export const ROUTES = {
   HOME: "/",
-  BUSCAR: "/buscar",
-  FAVORITOS: "/favoritos",
   CATEGORIA: "/categorias/[nombre]",
+  MARCA: "/marcas/[nombre]",
+  ETIQUETA: "/etiquetas/[nombre]",
   FICHA: "/ficha/[id]",
 } as const;
 
@@ -24,4 +25,12 @@ export function fichaShowRoute(id: string) {
 
 export function categoriaShowRoute(nombre: string) {
   return buildRoute(ROUTES.CATEGORIA, { nombre });
+}
+
+export function marcaShowRoute(nombre: string) {
+  return buildRoute(ROUTES.MARCA, { nombre });
+}
+
+export function etiquetaShowRoute(nombre: string) {
+  return buildRoute(ROUTES.ETIQUETA, { nombre });
 }

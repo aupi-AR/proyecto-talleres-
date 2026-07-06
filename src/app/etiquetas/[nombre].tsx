@@ -1,11 +1,11 @@
-// Pantalla de categoría
+// Pantalla de etiqueta
 import { ProductListScreen } from "@/components/product-list-screen";
 import { Stack, useLocalSearchParams } from "expo-router";
 
-type CategoriaParams = { nombre: string };
+type EtiquetaParams = { nombre: string };
 
-export default function CategoriaScreen() {
-  const { nombre } = useLocalSearchParams<CategoriaParams>();
+export default function EtiquetaScreen() {
+  const { nombre } = useLocalSearchParams<EtiquetaParams>();
   const displayName = nombre.replace(/-/g, " ");
   const title = displayName.charAt(0).toUpperCase() + displayName.slice(1);
 
@@ -19,7 +19,7 @@ export default function CategoriaScreen() {
           headerShadowVisible: false,
         }}
       />
-      <ProductListScreen title={title} field="categories_tags" value={nombre} />
+      <ProductListScreen title={title} field="labels_tags" value={nombre} />
     </>
   );
 }

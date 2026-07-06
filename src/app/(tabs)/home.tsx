@@ -1,7 +1,8 @@
+// Pantalla de inicio
 import { categorias, type Categoria } from "@/data/categorias";
 import { etiquetas } from "@/data/etiquetas";
 import { marcas, type Marca } from "@/data/marcas";
-import { categoriaShowRoute } from "@/navigation/routes";
+import { categoriaShowRoute, etiquetaShowRoute, marcaShowRoute } from "@/navigation/routes";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { ScrollView, StatusBar, StyleSheet, Text, View, Pressable } from "react-native";
@@ -89,7 +90,7 @@ export default function HomeScreen() {
               <TagChip
                 key={tag.id}
                 label={tag.nombre}
-                onPress={() => router.push(categoriaShowRoute(tag.id))}
+                onPress={() => router.push(etiquetaShowRoute(tag.id))}
               />
             ))}
           </View>
@@ -103,7 +104,7 @@ export default function HomeScreen() {
               <BrandCard
                 key={marca.id}
                 item={marca}
-                onPress={() => router.push(categoriaShowRoute(marca.id))}
+                onPress={() => router.push(marcaShowRoute(marca.id))}
               />
             ))}
           </View>

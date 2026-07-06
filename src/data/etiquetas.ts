@@ -1,3 +1,4 @@
+// Datos de etiquetas
 export type Etiqueta = {
   id: string;
   nombre: string;
